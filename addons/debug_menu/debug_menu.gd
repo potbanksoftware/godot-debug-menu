@@ -43,7 +43,7 @@ enum Style {
 ## The style to use when drawing the debug menu.
 var style := Style.HIDDEN:
 	set(value):
-		style = value
+		style = wrapi(value, 0, Style.MAX) as Style
 		match style:
 			Style.HIDDEN:
 				visible = false
