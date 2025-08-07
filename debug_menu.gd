@@ -118,7 +118,7 @@ func _ready() -> void:
 	information.text = "Loading hardware information...\n\n "
 	settings.text = "Loading project information..."
 	thread.start(
-		func():
+		func() -> void:
 			# Disable thread safety checks as they interfere with this add-on.
 			# This only affects this particular thread, not other thread instances in the project.
 			# See <https://github.com/godotengine/godot/pull/78000> for details.
